@@ -21,3 +21,9 @@
   }
   ```
   - In package.json file create a script called *lint* and thecommand `eslint src --ext .ts,.tsx` on it (if you add flag *--fix* it will fix all the eslint errors)
+
+  ## Default Theme and ThemeProvider
+
+  1. Create a styles folder with global.css and themes folder. Inside of themes folder create a file called default.ts, containing color variables as a exported const.
+
+  2. `pnpm add styled-components` and `pnpm add -D @types/styled-components`
