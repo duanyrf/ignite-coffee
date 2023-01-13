@@ -13,18 +13,18 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 0;
   }
 
   body {
-    min-height: 100vh;
-    background: ${(props) => props.theme['base-background']};
+    background-color: ${(props) => props.theme['base-background']};
+    color: ${(props) => props.theme['base-text']};
   }
 
   body,
   input,
   button {
     font-family: 'Roboto', sans-serif;
-    color: ${(props) => props.theme['base-text']};
     font-size: 1rem;
     line-height: 130%;
     font-weight: 400;

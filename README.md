@@ -27,3 +27,15 @@
   1. Create a styles folder with global.css and themes folder. Inside of themes folder create a file called default.ts, containing color variables as a exported const.
 
   2. `pnpm add styled-components` and `pnpm add -D @types/styled-components`
+
+  ## Routes and Pages
+
+  1. `pnpm add react-router-dom`
+
+  2. Create a Router.tsx file at root dir and put the <Routes> and each <Route> on it;
+
+  3. At App.tsx import <BrowserRouter> and wrap <Router> imported. Pu it in <ThemeProvider>.
+
+  ## Routes Layout
+
+  
