@@ -1,22 +1,22 @@
 import styled from 'styled-components'
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   width: 100%;
+  max-width: 70rem;
   height: 6.5rem;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 2rem;
+  padding: 2rem 0;
 
   div {
     display: flex;
-    align-items: center;
     align-items: center;
     gap: 0.75rem;
   }
 `
 export const ButtonLocale = styled.button`
-  /* width: 9rem; */
   height: 2.4rem;
   display: flex;
   align-items: center;
