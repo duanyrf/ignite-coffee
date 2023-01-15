@@ -4,7 +4,7 @@ interface InfoContainerProps {
   bgColor: string
 }
 
-export const InfoContainer = styled.p<InfoContainerProps>`
+export const InfoContainer = styled.div<InfoContainerProps>`
   display: flex;
   align-items: center;
   gap: 0.75rem;

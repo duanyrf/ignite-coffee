@@ -1,5 +1,6 @@
 import { CoffeeCard } from '../CoffeeCard'
 import { CoffeesList, CoffeesMenuContainer } from './styles'
+import { coffees } from '../../../../data/coffeesList'
 
 export function CoffeesMenu() {
   return (
@@ -7,11 +8,16 @@ export function CoffeesMenu() {
       <header>Nossos cafés</header>
 
       <CoffeesList>
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
+        {coffees.map((coffee) => (
+          <CoffeeCard
+            key={coffee.id}
+            photo={coffee.photo}
+            tags={coffee.tags}
+            name={coffee.name}
+            description={coffee.description}
+            price={coffee.price}
+          />
+        ))}
       </CoffeesList>
     </CoffeesMenuContainer>
   )

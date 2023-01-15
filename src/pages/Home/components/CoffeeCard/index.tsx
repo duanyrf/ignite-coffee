@@ -6,25 +6,41 @@ import {
   OrderWrapper,
   TagContainer,
 } from './styles'
-import coffeeImg from '../../../../assets/coffees/expresso.svg'
 import { AmountInput } from '../../../../components/AmountInput'
+import { CurrencyConverter } from '../../../../utils/formatConverter'
 
-export function CoffeeCard() {
+interface CoffeeCardProps {
+  photo: string
+  tags: string[]
+  name: string
+  description: string
+  price: number
+}
+
+export function CoffeeCard({
+  photo,
+  tags,
+  name,
+  description,
+  price,
+}: CoffeeCardProps) {
   return (
     <CardContainer>
-      <img src={coffeeImg} alt="Imagem de café expresso" />
+      <img src={`/src/assets/coffees/${photo}`} alt="" />
 
       <TagContainer>
-        <CoffeeTag>Tradicional</CoffeeTag>
+        {tags.map((tag) => (
+          <CoffeeTag key={tag}>{tag}</CoffeeTag>
+        ))}
       </TagContainer>
 
-      <p>Expresso Tradicional</p>
+      <p>{name}</p>
 
-      <span>O tradicional café feito com água quente e grãos moídos</span>
+      <span>{description}</span>
 
       <OrderWrapper>
         <p>
-          R$ <span>9,90</span>
+          R$ <span>{CurrencyConverter(price)}</span>
         </p>
 
         <CartWrapper>
